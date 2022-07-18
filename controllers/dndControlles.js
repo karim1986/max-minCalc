@@ -1,6 +1,7 @@
 const asyncHandler = require("express-async-handler");
 let javascriptLpSolver = require("javascript-lp-solver");
 const Dnd = require("../models/DndModel");
+const inventory = require("../data/nutrientInventory.json");
 
 //@desc     Get all DND
 //@route    Get /api/dnd
@@ -35,8 +36,54 @@ const createDnd = asyncHandler(async (req, res) => {
   }
 
   const dnd = await Dnd.create(req.body);
-  console.log(req.body.dnd);
-  res.status(201).json({ success: true, data: dnd });
+  const elements = dnd.dnd.map((element) => element);
+
+  console.log(elements[1]["vitamin D3"]);
+  let solver = javascriptLpSolver,
+    results,
+    model = {
+      optimize: "quantity",
+      opType: "min",
+
+      constraints: {
+        dndRangeA: {
+          max: (elements[0]["zinc"] * 120) / 100,
+          min: (elements[0]["zinc"] * 70) / 100,
+        },
+        dndRangeB: {
+          max: (elements[1]["vitamin D3"] * 120) / 100,
+          min: (elements[1]["vitamin D3"] * 70) / 100,
+        },
+        dndRangeC: {
+          max: (elements[2]["omega-3"] * 120) / 100,
+          min: (elements[2]["omega-3"] * 70) / 100,
+        },
+      },
+
+      variables: {
+        ZincpillOne: { dndRangeA: 1, quantity: 1 },
+        ZincpillTwo: { dndRangeA: 4, quantity: 1 },
+        ZincpillThree: { dndRangeA: 10, quantity: 1 },
+        vitaminD3pillOne: { dndRangeB: 780, quantity: 1 },
+        vitaminD3pillTwo: { dndRangeB: 2340, quantity: 1 },
+        omega3pillOne: { dndRangeC: 750, quantity: 1 },
+        omega3pillTwo: { dndRangeC: 1400, quantity: 1 },
+      },
+      ints: {
+        ZincpillOne: 1,
+        ZincpillTwo: 1,
+        ZincpillThree: 1,
+        vitaminD3pillOne: 1,
+        vitaminD3pillTwo: 1,
+        omega3pillOne: 1,
+        omega3pillTwo: 1,
+      },
+    };
+  results = solver.Solve(model);
+
+  console.log(results);
+
+  res.status(201).json({ success: true, data: dnd, dnp: results });
 });
 
 //@desc     Get all DND
