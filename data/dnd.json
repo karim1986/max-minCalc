@@ -8,15 +8,18 @@
   },
   {
     "user": "B",
-    "zinc": [6.6],
-    "vitamineD3": [1500]
+    "dnd": [
+      { "zinc": 2.6, "unit": "mg" },
+      { "vitaminD3": 3000, "unit": "iU" },
+      { "omega3": 1500, "unit": "mg" }
+    ]
   },
   {
     "user": "C",
     "dnd": [
       { "zinc": 3.6, "unit": "mg" },
-      { "vitaminD3": 3000, "unit": "iU" },
-      { "omega3": 2000, "unit": "mg" }
+      { "vitamin D3": 3000, "unit": "iU" },
+      { "omega 3": 2000, "unit": "mg" }
     ]
   }
 ]
