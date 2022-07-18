@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 const dndSchema = mongoose.Schema(
   {
     dnd: {
-      type: [Object],
+      type: Array,
       reuiqred: true,
     },
     user: {

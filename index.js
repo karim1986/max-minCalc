@@ -11,7 +11,8 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
 app.use("/api/users", require("./routes/userRoute"));
-app.use("/api/dnd", require("./routes/userRoute"));
+app.use("/api/dnd", require("./routes/dndRoute"));
+app.use("/api/recommendeddnp", require("./routes/recommendedDnpRoute"));
 
 app.use(errorHandler);
 

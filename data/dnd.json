@@ -1,17 +1,22 @@
 [
   {
-    "_id": "1",
     "user": "A",
-    "dnd": [{ "zinc": "6.6" }, { "vitamin D3": "1500" }, { "omega 3": "" }]
+    "dnd": [
+      { "zinc": 6.6, "unit": "mg" },
+      { "vitamin D3": "1500", "unit": "iU" }
+    ]
   },
   {
-    "_id": "2",
     "user": "B",
-    "dnd": [{ "zinc": "2.6" }, { "vitamin D3": "3000" }, { "omega 3": "1500" }]
+    "zinc": [6.6],
+    "vitamineD3": [1500]
   },
   {
-    "_id": "3",
     "user": "C",
-    "dnd": [{ "zinc": "3.6" }, { "vitamin D3": "3000" }, { "omega 3": "2000" }]
+    "dnd": [
+      { "zinc": 3.6, "unit": "mg" },
+      { "vitaminD3": 3000, "unit": "iU" },
+      { "omega3": 2000, "unit": "mg" }
+    ]
   }
 ]

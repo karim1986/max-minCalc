@@ -1,0 +1,21 @@
+[
+  {
+    "micronutrient": [
+      {
+        "zinc": [
+          { "pill": 22, "unit": "mg", "absorption": 15 },
+          { "pill": 30, "unit": "mg", "absorption": 10 },
+          { "pill": 30, "unit": "mg", "absorption": 10 }
+        ],
+        "vitaminD3": [
+          { "pill": 1000, "unit": "iU", "absorption": 78 },
+          { "pill": 3000, "unit": "iU", "absorption": 78 }
+        ],
+        "omega3": [
+          { "pill": 750, "unit": "mg", "absorption": 100 },
+          { "pill": 1400, "unit": "mg", "absorption": 100 }
+        ]
+      }
+    ]
+  }
+]
