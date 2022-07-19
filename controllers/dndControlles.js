@@ -50,37 +50,37 @@ const createDnd = asyncHandler(async (req, res) => {
       opType: "min",
 
       constraints: {
-        dndRangeA: {
+        dnd_A: {
           max: (elements[0]["zinc"] * 120) / 100,
           min: (elements[0]["zinc"] * 70) / 100,
         },
-        dndRangeB: {
+        dnd_B: {
           max: (elements[1]["vitamin D3"] * 120) / 100,
           min: (elements[1]["vitamin D3"] * 70) / 100,
         },
-        dndRangeC: {
+        dnd_C: {
           max: (elements[2]["omega-3"] * 120) / 100,
           min: (elements[2]["omega-3"] * 70) / 100,
         },
       },
 
       variables: {
-        ZincpillOne: { dndRangeA: 3.3, quantity: 1 },
-        ZincpillTwo: { dndRangeA: 3, quantity: 1 },
-        ZincpillThree: { dndRangeA: 5, quantity: 1 },
-        vitaminD3pillOne: { dndRangeB: 780, quantity: 1 },
-        vitaminD3pillTwo: { dndRangeB: 2340, quantity: 1 },
-        omega3pillOne: { dndRangeC: 750, quantity: 1 },
-        omega3pillTwo: { dndRangeC: 1400, quantity: 1 },
+        ZP1: { dnd_A: 3.3, quantity: 1 },
+        ZP2: { dnd_A: 3, quantity: 1 },
+        ZP3: { dnd_A: 5, quantity: 1 },
+        VD3P1: { dnd_B: 780, quantity: 1 },
+        VD3P2: { dnd_B: 2340, quantity: 1 },
+        OMG3_1: { dnd_C: 750, quantity: 1 },
+        OMG3_2: { dnd_C: 1400, quantity: 1 },
       },
       ints: {
-        ZincpillOne: 1,
-        ZincpillTwo: 1,
-        ZincpillThree: 1,
-        vitaminD3pillOne: 1,
-        vitaminD3pillTwo: 1,
-        omega3pillOne: 1,
-        omega3pillTwo: 1,
+        ZP1: 1,
+        ZP2: 1,
+        ZP3: 1,
+        VD3P1: 1,
+        VD3P2: 1,
+        OMG3_1: 1,
+        OMG3_2: 1,
       },
     };
   results = solver.Solve(model);
