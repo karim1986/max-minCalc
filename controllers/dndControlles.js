@@ -1,11 +1,12 @@
 const asyncHandler = require("express-async-handler");
 let javascriptLpSolver = require("javascript-lp-solver");
 const Dnd = require("../models/DndModel");
-const inventory = require("../data/dnd.json");
-const element = inventory.find((element) => element.micronutrientCatalog);
-const m = element.micronutrientCatalog[0];
-const z = m.zinc.map((m) => (m.pill * m.absorption) / 100);
-console.log(element);
+
+// const inventory = require("../data/dnd.json");
+// const element = inventory.find((element) => element.micronutrientCatalog);
+// const m = element.micronutrientCatalog[0];
+// const z = m.zinc.map((m) => (m.pill * m.absorption) / 100);
+// console.log(element);
 
 //@desc     Get all DND
 //@route    Get /api/dnd
