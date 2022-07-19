@@ -1,25 +1,109 @@
 [
   {
-    "user": "A",
+    "user": "62d4893a01a60d0ed6c5eccc",
     "dnd": [
       { "zinc": 6.6, "unit": "mg" },
       { "vitamin D3": "1500", "unit": "iU" }
+    ],
+    "micronutrientCatalog": [
+      {
+        "zinc": [
+          { "pill": 22, "unit": "mg", "absorption": 15 },
+          { "pill": 30, "unit": "mg", "absorption": 10 },
+          { "pill": 50, "unit": "mg", "absorption": 10 }
+        ],
+        "vitaminD3": [
+          { "pill": 1000, "unit": "iU", "absorption": 78 },
+          { "pill": 3000, "unit": "iU", "absorption": 78 }
+        ],
+        "omega3": [
+          { "pill": 750, "unit": "mg", "absorption": 100 },
+          { "pill": 1400, "unit": "mg", "absorption": 100 }
+        ]
+      }
+    ],
+    "pnd": [
+      {
+        "feasible": true,
+        "result": 3,
+        "bounded": true,
+        "isIntegral": true,
+        "ZincpillThree": 1,
+        "vitaminD3pillOne": 2
+      }
     ]
   },
   {
-    "user": "B",
+    "user": "62d489a18cb4de3e94fba26c",
     "dnd": [
       { "zinc": 2.6, "unit": "mg" },
       { "vitaminD3": 3000, "unit": "iU" },
       { "omega3": 1500, "unit": "mg" }
+    ],
+    "micronutrientCatalog": [
+      {
+        "zinc": [
+          { "pill": 22, "unit": "mg", "absorption": 15 },
+          { "pill": 30, "unit": "mg", "absorption": 10 },
+          { "pill": 30, "unit": "mg", "absorption": 10 }
+        ],
+        "vitaminD3": [
+          { "pill": 1000, "unit": "iU", "absorption": 78 },
+          { "pill": 3000, "unit": "iU", "absorption": 78 }
+        ],
+        "omega3": [
+          { "pill": 750, "unit": "mg", "absorption": 100 },
+          { "pill": 1400, "unit": "mg", "absorption": 100 }
+        ]
+      }
+    ],
+
+    "pnd": [
+      {
+        "feasible": true,
+        "result": 3,
+        "bounded": true,
+        "isIntegral": true,
+        "vitaminD3pillTwo": 1,
+        "omega3pillTwo": 1,
+        "ZincpillTwo": 1
+      }
     ]
   },
   {
-    "user": "C",
+    "user": "62d4985002a53b8c42c9aafb",
     "dnd": [
       { "zinc": 3.6, "unit": "mg" },
       { "vitamin D3": 3000, "unit": "iU" },
       { "omega 3": 2000, "unit": "mg" }
+    ],
+    "micronutrientCatalog": [
+      {
+        "zinc": [
+          { "pill": 22, "unit": "mg", "absorption": 15 },
+          { "pill": 30, "unit": "mg", "absorption": 10 },
+          { "pill": 30, "unit": "mg", "absorption": 10 }
+        ],
+        "vitaminD3": [
+          { "pill": 1000, "unit": "iU", "absorption": 78 },
+          { "pill": 3000, "unit": "iU", "absorption": 78 }
+        ],
+        "omega3": [
+          { "pill": 750, "unit": "mg", "absorption": 100 },
+          { "pill": 1400, "unit": "mg", "absorption": 100 }
+        ]
+      }
+    ],
+    "pnd": [
+      {
+        "feasible": true,
+        "result": 3,
+        "bounded": true,
+        "isIntegral": true,
+        "vitaminD3pillTwo": 1,
+        "omega3pillTwo": 1,
+        "ZincpillTwo": 1
+      }
     ]
   }
 ]

@@ -7,15 +7,39 @@ let solver = javascriptLpSolver,
     opType: "min",
 
     constraints: {
-      dndRange: { max: (6.6 * 120) / 100, min: (6.6 * 70) / 100 },
+      dndRangeA: {
+        max: (6.6 * 120) / 100,
+        min: (6.6 * 70) / 100,
+      },
+      dndRangeB: {
+        max: (1500 * 120) / 100,
+        min: (1500 * 70) / 100,
+      },
+      dndRangeC: {
+        max: (0 * 120) / 100,
+        min: (0 * 70) / 100,
+      },
     },
 
     variables: {
-      pillOne: { dndRange: 1, quantity: 1 },
-      pillTwo: { dndRange: 4, quantity: 1 },
-      pillThree: { dndRange: 10, quantity: 1 },
+      ZincpillOne: { dndRangeA: 3.3, quantity: 1 },
+      ZincpillTwo: { dndRangeA: 3, quantity: 1 },
+      ZincpillThree: { dndRangeA: 5, quantity: 1 },
+      vitaminD3pillOne: { dndRangeB: 780, quantity: 1 },
+      vitaminD3pillTwo: { dndRangeB: 2340, quantity: 1 },
+      omega3pillOne: { dndRangeC: 750, quantity: 1 },
+      omega3pillTwo: { dndRangeC: 1400, quantity: 1 },
     },
-    ints: { pillOne: 1, pillTwo: 1, pillThree: 1 },
+    ints: {
+      ZincpillOne: 1,
+      ZincpillTwo: 1,
+      ZincpillThree: 1,
+      vitaminD3pillOne: 1,
+      vitaminD3pillTwo: 1,
+      omega3pillOne: 1,
+      omega3pillTwo: 1,
+    },
   };
 results = solver.Solve(model);
+
 console.log(results);
